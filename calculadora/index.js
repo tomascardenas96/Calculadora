@@ -233,4 +233,4 @@ dot.addEventListener("click", () => {
   addDot();
 })
 
-// Me resta terminar algunas funcionalidades ("+/-" , ".", "%").
+// Me resta terminar algunas funcionalidades ("+/-" , "%").
