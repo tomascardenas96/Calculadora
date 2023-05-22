@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./landscape.jpg");
+}
+
+.calculator-container {
+    margin-top: 8%;
+    width: 300px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border: 1px solid white;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.443);
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.result-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 15px;
+    padding-top: 50px;
+    margin-bottom: -15px;
+    flex-direction: column;
+}
+
+#prev-operat {
+    margin-top: -20px;
+    color:rgba(0, 0, 0, 0.463);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.result-container #result{
+    height: 100%;
+    font-size: 50px;
+    max-width: 9ch;
+}
+
+.buttons-container {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 5px;
+    padding: 2px;
+}
+
+.buttons-container p{
+    font-size: 17px;
+    font-weight: 400;
+    border: 1px solid white;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+    padding: 7px;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.buttons-container p:last-child {
+    background-color: rgba(0, 0, 255, 0.60);
+    color: white;
+}
+
+.buttons-container p:active {
+    color: rgba(0, 0, 0, 0.349);
+}
