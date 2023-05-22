@@ -96,6 +96,7 @@ function splitOperation() {
 
 function addDot() {
   !visor.includes(".") ? visor += "." : visor;
+  result.innerText = `${visor}`
 }
 
 function deleteAllOperation() {
@@ -111,7 +112,7 @@ function endOperation() {
 }
 
 function intNumb() {
-  !Number.isInteger(resultado) ? resultado = resultado.toFixed(4) : resultado; 
+  !Number.isInteger(resultado) ? resultado = parseFloat(resultado) : resultado; 
 }
 
 function deleteNumber() {
