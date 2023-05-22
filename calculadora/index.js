@@ -2,6 +2,8 @@
 let resultado;
 let symb = "";
 let visor = "0";
+//opA is the same number that can see in the visor, and
+//opB is previous number(small letter).
 let opA = 0;
 let opB = 0;
 
@@ -37,6 +39,7 @@ function showVisor(numero) {
 }
 
 function addOperation() {
+  symb = "sumar";
   endOperation();
   if (opB === 0) {
     opB = calculadora(opA, opB, sumar);
@@ -47,10 +50,10 @@ function addOperation() {
   resultado = opB;
   intNumb();
   result.innerText = `${resultado}`;
-  symb = "sumar";
 }
 
 function substractOperation() {
+  symb = "restar";
   endOperation();
   if (opB === 0) {
     opB = calculadora(opA, opB, restar);
@@ -61,10 +64,10 @@ function substractOperation() {
   resultado = opB;
   intNumb();
   result.innerText = `${resultado}`;
-  symb = "restar";
 }
 
 function multiplyOperation() {
+  symb = "multiplicar";
   endOperation();
   if (opB === 0) {
     opB = calculadora(opA, 1, multiplicar);
@@ -75,10 +78,10 @@ function multiplyOperation() {
   resultado = opB;
   intNumb();
   result.innerText = `${resultado}`;
-  symb = "multiplicar";
 }
 
 function splitOperation() {
+  symb = "dividir";
   endOperation();
   if (opB === 0) {
     opB = calculadora(opA, 1, dividir);
@@ -89,7 +92,10 @@ function splitOperation() {
   resultado = opB;
   intNumb();
   result.innerText = `${resultado}`;
-  symb = "dividir";
+}
+
+function addDot() {
+  !visor.includes(".") ? visor += "." : visor;
 }
 
 function deleteAllOperation() {
@@ -151,6 +157,7 @@ const nine = document.querySelector("#nine");
 const equal = document.querySelector("#equal");
 const deleted = document.querySelector("#delete");
 const deleteAll = document.querySelector("#delete-all");
+const dot = document.querySelector("#dot");
 
 //Then use event listeners to press each key of the interface.
 zero.addEventListener("click", () => {
@@ -220,5 +227,9 @@ deleteAll.addEventListener("click", () => {
 equal.addEventListener("click", () => {
   equalOperation();
 });
+
+dot.addEventListener("click", () => {
+  addDot();
+})
 
 // Me resta terminar algunas funcionalidades ("+/-" , ".", "%").
