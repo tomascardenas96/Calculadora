@@ -41,11 +41,7 @@ function showVisor(numero) {
 function addOperation() {
   symb = "sumar";
   endOperation();
-  if (opB === 0) {
-    opB = calculadora(opA, opB, sumar);
-  } else {
-    opB = calculadora(opB, opA, sumar);
-  }
+  opB = calculadora(opA, opB, sumar);
   prevOperat.innerText = `${opB}+`;
   resultado = opB;
   intNumb();
